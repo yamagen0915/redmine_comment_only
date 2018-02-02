@@ -11,20 +11,22 @@
       $show.css('display', 'none');
       $hide.css('display', '');
       $targets.css('display', '');
-      localStorage.setItem(STORAGE_KEY, 'show');
+      localStorage && localStorage.setItem(STORAGE_KEY, 'show');
     });
 
     $hide.on('click', function () {
       $show.css('display', '');
       $hide.css('display', 'none');
       $targets.css('display', 'none');
-      localStorage.setItem(STORAGE_KEY, 'hide');
+      localStorage && localStorage.setItem(STORAGE_KEY, 'hide');
     });
 
-    if (localStorage && localStorage.getItem(STORAGE_KEY) === 'hide') {
-      $hide.trigger('click');
-    } else {
-      $show.trigger('click');
+    if (localStorage) {
+      if (localStorage.getItem(STORAGE_KEY) === 'hide') {
+        $hide.trigger('click');
+      } else {
+        $show.trigger('click');
+      }
     }
 
     $('#history').before($hide, $show);
