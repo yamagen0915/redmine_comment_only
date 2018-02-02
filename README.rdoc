@@ -1,3 +1,7 @@
-= comment_only
+= redmin_comment_only
 
-Description goes here
+this is a plugin for redmine.
+
+You can toggle display comments only or display all history.
+And it is save to localStorage.
+
