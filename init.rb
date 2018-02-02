@@ -6,3 +6,5 @@ Redmine::Plugin.register :redmine_comment_only do
   url 'https://github.com/yamagen0915/redmine_comment_only'
   author_url 'https://github.com/yamagen0915/'
 end
+
+require_dependency 'redmine_comment_only/hooks'
