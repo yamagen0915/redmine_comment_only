@@ -21,10 +21,10 @@
       localStorage.setItem(STORAGE_KEY, 'hide');
     });
 
-    if (localStorage && localStorage.getItem(STORAGE_KEY) === 'show') {
-      $show.trigger('click');
-    } else {
+    if (localStorage && localStorage.getItem(STORAGE_KEY) === 'hide') {
       $hide.trigger('click');
+    } else {
+      $show.trigger('click');
     }
 
     $('#history').before($hide, $show);
